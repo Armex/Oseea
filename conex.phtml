@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+<?php 
+function Conectarse() 
+{ 
+   if (!($link=mysql_connect("localhost","ARTURO","UPIICSA"))) 
+   { 
+      echo "Error conectando a al usuario."; 
+      exit(); 
+   } 
+   if (!mysql_select_db("HOSTING",$link)) 
+   { 
+      echo "Error seleccionando la base de datos."; 
+      exit(); 
+   } 
+	
+	else
+	echo "Conexion exitosa";
+	
+   return $link; 
+} 
+?>
+
+</body>
+</html>
